@@ -1,0 +1,107 @@
+.form{
+  display: flex;
+  flex-flow: column;
+  width: 776px;
+  justify-content: center;
+  background: #fff;
+  padding: 20px 32px;
+  border: 1px dotted #5a5a5a;
+  margin: auto;
+  position: relative;
+}
+.form h2{
+  font-family: CodePro, monospace;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #9c053c;
+  position: relative;
+  line-height: 1;
+  text-align: center;
+  margin: 14px 0;
+}
+.form input:not([type="submit"]){
+  border: none;
+  border-bottom: 1px solid;
+  height: 41px;
+  margin-bottom: 8px;
+  outline: none;
+}
+.form input::placeholder{
+  color: $black;
+  font-family: CodeProL,sans-serif;
+  flex: 25;
+  font-weight: 700;
+}
+.form .form_grop input[type='checkbox']{
+  display: none;
+
+}
+.form .form_grop input[type='checkbox'] + label{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: 1px solid;
+  position: relative;
+  transition: all 4s ease-in-out;
+  vertical-align: top;
+  top: 7px;
+  cursor: pointer;
+}
+
+.form .form_grop input[type='checkbox']:checked + label:after{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: $red;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.form .form_grop span{
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+.form .form_grop .btn{
+  display: inline-block;
+  background-color: $red;
+  width: 237px;
+  height: 56px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  margin-left: 20px;
+  font-family: CodeProL, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+}
+.form .form_grop .btn:hover{
+  background-color: #900539;
+}
+label.error{
+  background: rgba(156, 5, 60, 0.32);
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+input.error{
+  border-color: #9c053c!important;
+  border-width: 2px!important
+}
+input.valid{
+  border-color: #79c787 !important;
+  border-width: 2px !important;
+  box-shadow: 0px 2px 2px rgba(78, 171, 50, 0.21);
+}
+.form .form_grop {
+  margin-top: 32px;
+}
